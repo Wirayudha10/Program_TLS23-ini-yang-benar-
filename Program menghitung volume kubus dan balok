@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	int bangun_ruang;
+	float panjang, lebar, tinggi, sisi, volume;
+	cout << "selamat datang di program menghitung volume balok & kubus" << endl;
+
+	//memilih bangun ruang yang akan dihitung volumenya
+	cout << "pilih bangun ruang yang akan dihitung volumenya: " << endl;
+	cout << " 1.kubus" << endl;
+	cout << " 2.balok" << endl;
+	cout << "masukan bangun ruang (pilih 1 atau 2) : ";
+	cin >> bangun_ruang;
+
+	//bangun ruang yang anda pilih adalah kubus
+	if (bangun_ruang == 1) {
+		cout << "masukan sisinya: ";
+		cin >> sisi;
+		volume = sisi * sisi * sisi;
+		cout << "volumenya adalah " << volume << endl;
+	}//bangun ruang yang anda pilih adalah balok
+	else if (bangun_ruang == 2) {
+		cout << "masukan panjangnya :";
+		cin >> panjang;
+		cout << "masukan lebarnya: ";
+		cin >> lebar;
+		cout << "masukan tingginya: ";
+		cin >> tinggi;
+		volume = panjang * lebar * tinggi;
+		cout << "volumenya adalah " << volume << endl;
+	}
+	else {
+		cout << "bangun ruang tidak valid" << endl;
+	}
+	cin.get();
+	return 0;
+}
